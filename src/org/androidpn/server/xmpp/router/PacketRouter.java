@@ -1,5 +1,4 @@
 /*
- * Copyright (C) 2010 Moduad Co., Ltd.
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,75 +16,56 @@
  */
 package org.androidpn.server.xmpp.router;
 
+import org.chat.entity.Chat;
 import org.xmpp.packet.IQ;
 import org.xmpp.packet.Message;
 import org.xmpp.packet.Packet;
 import org.xmpp.packet.Presence;
 
-/** 
- * This class is to handle incoming packets and route them to their corresponding handler.
- *
+/**
+ * This class is to handle incoming packets and route them to their
+ * corresponding handler.
+ * 
  * @author Sehwan Noh (devnoh@gmail.com)
  */
 public class PacketRouter {
 
-    private MessageRouter messageRouter;
+	private MessageRouter messageRouter;
 
-    private PresenceRouter presenceRouter;
+	private PresenceRouter presenceRouter;
 
-    private IQRouter iqRouter;
+	private IQRouter iqRouter;
 
-    /**
-     * Constructor. 
-     */
-    public PacketRouter() {
-        messageRouter = new MessageRouter();
-        presenceRouter = new PresenceRouter();
-        iqRouter = new IQRouter();
-    }
+	private ChatRouter chatRouter;
 
-    /**
-     * Routes the packet based on its type.
-     * 
-     * @param packet the packet to route
-     */
-    public void route(Packet packet) {
-        if (packet instanceof Message) {
-            route((Message) packet);
-        } else if (packet instanceof Presence) {
-            route((Presence) packet);
-        } else if (packet instanceof IQ) {
-            route((IQ) packet);
-        } else {
-            throw new IllegalArgumentException();
-        }
-    }
+	/**
+	 * Constructor.
+	 */
+	public PacketRouter() {
+		messageRouter = new MessageRouter();
+		presenceRouter = new PresenceRouter();
+		iqRouter = new IQRouter();
+		chatRouter = new ChatRouter();
+	}
 
-    /**
-     * Routes the IQ packet.
-     * 
-     * @param packet the packet to route
-     */
-    public void route(IQ packet) {
-        iqRouter.route(packet);
-    }
-
-    /**
-     * Routes the Message packet.
-     * 
-     * @param packet the packet to route
-     */
-    public void route(Message packet) {
-        messageRouter.route(packet);
-    }
-
-    /**
-     * Routes the Presence packet.
-     * 
-     * @param packet the packet to route
-     */
-    public void route(Presence packet) {
-        presenceRouter.route(packet);
-    }
+	/**
+	 * Routes the packet based on its type.
+	 * 
+	 * @param packet
+	 *            the packet to route
+	 */
+	public void route(Packet packet) {
+		if (packet instanceof Message) {
+			messageRouter.route((Message) packet);
+		} else if (packet instanceof Presence) {
+			presenceRouter.route((Presence) packet);
+		} else if (packet instanceof IQ) {
+			iqRouter.route((IQ) packet);
+		} else if (packet instanceof Chat) {
+			chatRouter.route((Chat) packet);
+		} else {
+			throw new IllegalArgumentException();
+		}
+	}
 
 }

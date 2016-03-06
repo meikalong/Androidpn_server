@@ -83,7 +83,7 @@ public class NotificationManager {
 			// 创建通知对象
 			NotificationMO notificationMO = new NotificationMO(apiKey, title, message, uri);
 			try {
-				notificationMO.setUsername(session.getUsername());
+				notificationMO.setUsername(session.getId());
 				notificationMO.setClientIp(session.getHostAddress());
 				notificationMO.setResource(session.getAddress().getResource());
 			} catch (Exception e) {
@@ -112,7 +112,14 @@ public class NotificationManager {
 
 	}
 
-	// 给所有用户发送通知
+	/**
+	 * 给所有用户发送通知
+	 * 
+	 * @param apiKey
+	 * @param title
+	 * @param message
+	 * @param uri
+	 */
 	public void sendAllBroadcast(String apiKey, String title, String message, String uri) {
 		// 生产推送通知对象，之所以移到这里来，是为了保证同一批次推送的通知ID是一样的。没什么作用
 		IQ notificationIQ = createNotificationIQ(apiKey, title, message, uri);
@@ -124,7 +131,7 @@ public class NotificationManager {
 	}
 
 	/**
-	 * Sends a newly created notification message to the specific user.
+	 * 给指定用户发送消息
 	 * 
 	 * @param apiKey
 	 *            the API key
@@ -191,6 +198,16 @@ public class NotificationManager {
 		return iq;
 	}
 
+	/**
+	 * 给多个指定用户发送离线消息
+	 * 
+	 * @param apiKey
+	 * @param username
+	 *            用户id以;符号分割
+	 * @param title
+	 * @param message
+	 * @param uri
+	 */
 	public void sendNotifications(String apiKey, String username, String title, String message, String uri) {
 		// 生产推送通知对象，之所以移到这里来，是为了保证同一批次推送的通知ID是一样的。没什么作用
 		IQ notificationIQ = createNotificationIQ(apiKey, title, message, uri);

@@ -137,13 +137,13 @@ public class ClientSession extends Session {
 	}
 
 	/**
-	 * Returns the username associated with this session.
+	 * 获得session的ID，这个ID就是用户的ID
 	 * 
 	 * @return the username
 	 * @throws UserNotFoundException
 	 *             if a user has not authenticated yet
 	 */
-	public String getUsername() throws UserNotFoundException {
+	public String getId() throws UserNotFoundException {
 		if (authToken == null) {
 			throw new UserNotFoundException();
 		}

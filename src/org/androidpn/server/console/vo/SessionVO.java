@@ -19,71 +19,71 @@ package org.androidpn.server.console.vo;
 
 import java.util.Date;
 
-/** 
+/**
  * A command class to represent a session.
- *
+ * 
  * @author Sehwan Noh (devnoh@gmail.com)
  */
 public class SessionVO {
 
-    private String username;
+	private String id;
 
-    private String resource;
+	private String resource;
 
-    private String status;
+	private String status;
 
-    private String presence;
+	private String presence;
 
-    private String clientIP;
+	private String clientIP;
 
-    private Date createdDate;
+	private Date createdDate;
 
-    public String getUsername() {
-        return username;
-    }
+	public String getId() {
+		return id;
+	}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    public String getResource() {
-        return resource;
-    }
+	public String getResource() {
+		return resource;
+	}
 
-    public void setResource(String resource) {
-        this.resource = resource;
-    }
+	public void setResource(String resource) {
+		this.resource = resource;
+	}
 
-    public String getStatus() {
-        return status;
-    }
+	public String getStatus() {
+		return status;
+	}
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
-    public String getPresence() {
-        return presence;
-    }
+	public String getPresence() {
+		return presence;
+	}
 
-    public void setPresence(String presence) {
-        this.presence = presence;
-    }
+	public void setPresence(String presence) {
+		this.presence = presence;
+	}
 
-    public String getClientIP() {
-        return clientIP;
-    }
+	public String getClientIP() {
+		return clientIP;
+	}
 
-    public void setClientIP(String clientIP) {
-        this.clientIP = clientIP;
-    }
+	public void setClientIP(String clientIP) {
+		this.clientIP = clientIP;
+	}
 
-    public Date getCreatedDate() {
-        return createdDate;
-    }
+	public Date getCreatedDate() {
+		return createdDate;
+	}
 
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
 
 }

@@ -16,7 +16,7 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-lang-2.4.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-logging-1.1.1.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-pool-1.3.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/dom4j-1.6.1.jar" sourcepath="D:/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/dwr-2.0.3.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ehcache-1.6.1.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ejb3-persistence-1.0.2.GA.jar"/>
@@ -41,7 +41,7 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-webmvc-2.5.6.jar" sourcepath="C:/Users/Administrator/.m2/repository/org/springframework/spring-webmvc/2.5.6/spring-webmvc-2.5.6-sources.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/standard-1.1.2.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/starter.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/tinder-1.2.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/tinder-1.2.1.jar" sourcepath="D:/.m2/repository/org/igniterealtime/tinder/1.2.1/tinder-1.2.1-sources.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xercesImpl-2.9.1.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xml-apis-1.3.04.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xpp3-1.1.4c.jar"/>
