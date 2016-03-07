@@ -25,7 +25,7 @@
 			<th width="15%">Client IP</th>
 			<th width="25%">Created</th>
 			--%>
-			<th>Username</th>
+			<th>SessionId</th>
 			<th>Resource</th>
 			<th>Status</th>
 			<th>Presence</th>
@@ -36,7 +36,7 @@
 	<tbody>
 		<c:forEach var="sess" items="${sessionList}">
 			<tr>
-				<td><c:out value="${sess.username}" /></td>
+				<td><c:out value="${sess.id}" /></td>
 				<td><c:out value="${sess.resource}" /></td>
 				<td align="center"><c:out value="${sess.status}" /></td>
 				<td>
