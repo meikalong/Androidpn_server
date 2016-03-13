@@ -148,7 +148,7 @@ public class StanzaHandler {
 			log.debug("iq...");
 			processIQ(root);
 		} else if ("chat".equals(tag)) {
-			log.debug("iq...");
+			log.debug("chat...");
 			processChat(root);
 		} else {
 			log.warn("Unexpected packet tag (not message, iq, presence)" + root.asXML());
@@ -158,7 +158,7 @@ public class StanzaHandler {
 	}
 
 	private void processChat(Element root) {
-		log.debug("processIQ()...");
+		log.debug("processChat()...");
 		Chat packet;
 		try {
 			packet = new Chat(root);
