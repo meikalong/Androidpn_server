@@ -44,9 +44,7 @@ public class SessionManager {
 
 	private static final Log log = LogFactory.getLog(SessionManager.class);
 
-	private static final String RESOURCE_NAME = "AcmobiPushClient";
-
-	private static SessionManager instance;
+	private static SessionManager instance = new SessionManager();
 
 	private String serverName;
 
@@ -72,11 +70,6 @@ public class SessionManager {
 	 * @return the instance
 	 */
 	public static SessionManager getInstance() {
-		if (instance == null) {
-			synchronized (SessionManager.class) {
-				instance = new SessionManager();
-			}
-		}
 		return instance;
 	}
 
