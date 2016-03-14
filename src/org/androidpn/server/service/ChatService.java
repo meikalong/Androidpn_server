@@ -1,9 +1,9 @@
 package org.androidpn.server.service;
 
+import org.androidpn.server.model.Chat;
 import org.androidpn.server.util.Config;
 import org.androidpn.server.xmpp.push.NotificationManager;
 import org.androidpn.server.xmpp.session.SessionManager;
-import org.chat.entity.Chat;
 import org.dom4j.Element;
 import org.xmpp.packet.JID;
 

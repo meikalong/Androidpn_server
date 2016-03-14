@@ -1,4 +1,4 @@
-package org.chat.entity;
+package org.androidpn.server.model;
 
 import java.lang.reflect.Constructor;
 import java.util.Iterator;

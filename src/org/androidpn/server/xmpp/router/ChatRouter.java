@@ -1,7 +1,7 @@
 package org.androidpn.server.xmpp.router;
 
+import org.androidpn.server.model.Chat;
 import org.androidpn.server.service.ChatService;
-import org.chat.entity.Chat;
 
 public class ChatRouter {
 

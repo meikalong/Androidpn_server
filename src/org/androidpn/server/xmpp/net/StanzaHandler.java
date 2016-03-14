@@ -22,6 +22,7 @@ import java.io.StringReader;
 import java.util.List;
 import java.util.Random;
 
+import org.androidpn.server.model.Chat;
 import org.androidpn.server.model.NotificationMO;
 import org.androidpn.server.service.NotificationService;
 import org.androidpn.server.service.ServiceLocator;
@@ -32,7 +33,6 @@ import org.androidpn.server.xmpp.session.ClientSession;
 import org.androidpn.server.xmpp.session.Session;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.chat.entity.Chat;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.XMPPPacketReader;

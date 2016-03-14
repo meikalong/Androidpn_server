@@ -16,7 +16,7 @@
  */
 package org.androidpn.server.xmpp.router;
 
-import org.chat.entity.Chat;
+import org.androidpn.server.model.Chat;
 import org.xmpp.packet.IQ;
 import org.xmpp.packet.Message;
 import org.xmpp.packet.Packet;
